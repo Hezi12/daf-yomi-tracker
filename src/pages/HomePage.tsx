@@ -66,29 +66,29 @@ export const HomePage: React.FC = () => {
   return (
     <div className="space-y-8">
       {/* כותרת ברוכים הבאים */}
-      <div className="text-center">
-        <h2 className="text-3xl font-bold text-gray-900 hebrew-text mb-2">
+      <div className="text-center px-4 sm:px-0">
+        <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 hebrew-text mb-2">
           ברוכים הבאים למעקב דף היומי
         </h2>
-        <p className="text-gray-600 hebrew-text">
+        <p className="text-gray-600 hebrew-text text-sm sm:text-base">
           עקבו אחר ההתקדמות שלכם בלימוד השס ושמרו על המוטיבציה
         </p>
       </div>
 
       {/* סטטיסטיקות מהירות */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
         {quickStats.map((stat, index) => {
           const Icon = stat.icon;
           return (
             <Card key={index} className="relative overflow-hidden">
-              <div className="flex items-center">
-                <div className={`p-3 rounded-lg ${stat.bgColor}`}>
-                  <Icon className={`h-6 w-6 ${stat.color}`} />
+              <div className="flex flex-col sm:flex-row items-center sm:items-start p-1 sm:p-0">
+                <div className={`p-2 sm:p-3 rounded-lg ${stat.bgColor} mb-2 sm:mb-0`}>
+                  <Icon className={`h-5 w-5 sm:h-6 sm:w-6 ${stat.color}`} />
                 </div>
-                <div className="mr-4">
-                  <p className="text-2xl font-bold text-gray-900">{stat.value}</p>
-                  <p className="text-sm text-gray-500 hebrew-text">{stat.title}</p>
-                  <p className="text-xs text-gray-400">{stat.subtitle}</p>
+                <div className="sm:mr-4 text-center sm:text-right">
+                  <p className="text-lg sm:text-2xl font-bold text-gray-900">{stat.value}</p>
+                  <p className="text-xs sm:text-sm text-gray-500 hebrew-text">{stat.title}</p>
+                  <p className="text-xs text-gray-400 hidden sm:block">{stat.subtitle}</p>
                 </div>
               </div>
             </Card>

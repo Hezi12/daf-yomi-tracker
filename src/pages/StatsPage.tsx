@@ -56,26 +56,26 @@ export const StatsPage: React.FC = () => {
   return (
     <div className="space-y-8">
       <div>
-        <h1 className="text-3xl font-bold text-gray-900 hebrew-text mb-2">
+        <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 hebrew-text mb-2">
           סטטיסטיקות
         </h1>
-        <p className="text-gray-600 hebrew-text">
+        <p className="text-sm sm:text-base text-gray-600 hebrew-text">
           מעקב מפורט אחר ההתקדמות שלכם בלימוד השס
         </p>
       </div>
 
       {/* סטטיסטיקות כלליות */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
         {progressData.map((stat, index) => (
           <Card key={index}>
-            <CardContent className="flex items-center">
-              <div className={`p-3 rounded-lg ${stat.bgColor} ml-4`}>
-                <div className={`w-6 h-6 ${stat.color}`}>📊</div>
+            <CardContent className="flex flex-col sm:flex-row items-center sm:items-start p-3 sm:p-6">
+              <div className={`p-2 sm:p-3 rounded-lg ${stat.bgColor} mb-2 sm:mb-0 sm:ml-4`}>
+                <div className={`w-5 h-5 sm:w-6 sm:h-6 ${stat.color}`}>📊</div>
               </div>
-              <div>
-                <p className="text-2xl font-bold text-gray-900">{stat.value}</p>
-                <p className="text-sm text-gray-500 hebrew-text">{stat.title}</p>
-                <p className="text-xs text-gray-400">{stat.subtitle}</p>
+              <div className="text-center sm:text-right">
+                <p className="text-lg sm:text-2xl font-bold text-gray-900">{stat.value}</p>
+                <p className="text-xs sm:text-sm text-gray-500 hebrew-text">{stat.title}</p>
+                <p className="text-xs text-gray-400 hidden sm:block">{stat.subtitle}</p>
               </div>
             </CardContent>
           </Card>

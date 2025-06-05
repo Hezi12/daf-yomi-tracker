@@ -38,23 +38,23 @@ export const DafimListPage: React.FC = () => {
 
   return (
     <div className="space-y-6">
-      <div className="flex justify-between items-center">
+      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4">
         <div>
-          <h1 className="text-3xl font-bold text-gray-900 hebrew-text">
+          <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 hebrew-text">
             הדפים שלי
           </h1>
-          <p className="text-gray-600 hebrew-text mt-2">
+          <p className="text-sm sm:text-base text-gray-600 hebrew-text mt-2">
             כל הדפים שלמדתם עד כה ({dafimData.length} דפים)
           </p>
         </div>
-        <Link to="/add">
-          <Button>הוספת דף חדש</Button>
+        <Link to="/add" className="self-start sm:self-auto">
+          <Button className="w-full sm:w-auto">הוספת דף חדש</Button>
         </Link>
       </div>
 
       <Card>
         <CardContent className="space-y-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <Input
               placeholder="חיפוש לפי מסכת או דף..."
               value={searchTerm}

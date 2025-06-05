@@ -114,11 +114,11 @@ export const AddDafPage: React.FC = () => {
 
   return (
     <div className="max-w-2xl mx-auto">
-      <div className="mb-8">
-        <h1 className="text-3xl font-bold text-gray-900 hebrew-text mb-2">
+      <div className="mb-6 sm:mb-8">
+        <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 hebrew-text mb-2">
           תיעוד דף חדש
         </h1>
-        <p className="text-gray-600 hebrew-text">
+        <p className="text-sm sm:text-base text-gray-600 hebrew-text">
           הוסיפו דף שלמדתם והקליטו את כל הפרטים הרלוונטיים
         </p>
       </div>
@@ -209,17 +209,19 @@ export const AddDafPage: React.FC = () => {
             )}
 
             {/* כפתורי פעולה */}
-            <div className="flex justify-between pt-6">
+            <div className="flex flex-col sm:flex-row sm:justify-between gap-3 pt-6">
               <Button
                 type="button"
                 variant="secondary"
                 onClick={() => navigate('/')}
+                className="order-2 sm:order-1 w-full sm:w-auto"
               >
                 ביטול
               </Button>
               <Button
                 type="submit"
                 disabled={isSubmitting}
+                className="order-1 sm:order-2 w-full sm:w-auto"
               >
                 {isSubmitting ? 'שומר...' : 'שמירת לימוד'}
               </Button>
