@@ -6,6 +6,8 @@ import { DafimListPage } from './pages/DafimListPage';
 import { StatsPage } from './pages/StatsPage';
 
 function App() {
+  console.log('App component loaded');
+  
   return (
     <Router basename="/">
       <Layout>
