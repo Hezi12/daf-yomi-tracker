@@ -4,6 +4,7 @@ import { DafData, StudySession, Statistics } from '../types';
 import { getTotalDafim } from '../data/masechet';
 
 export function useDafData() {
+  console.log('useDafData hook called');
   const [dafimData, setDafimData] = useLocalStorage<DafData[]>('dafim-data', []);
 
   // הוספת לימוד חדש

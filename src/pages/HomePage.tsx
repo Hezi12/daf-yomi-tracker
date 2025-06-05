@@ -12,7 +12,6 @@ import { Card, CardHeader, CardTitle, CardContent } from '../components/ui/Card'
 import { Button } from '../components/ui/Button';
 import { useDafData } from '../hooks/useDafData';
 import { format, isToday } from 'date-fns';
-import { he } from 'date-fns/locale';
 
 export const HomePage: React.FC = () => {
   const { statistics, dafimData } = useDafData();
@@ -114,7 +113,7 @@ export const HomePage: React.FC = () => {
                       {lastStudiedDaf.masechet} דף {lastStudiedDaf.daf}
                     </p>
                     <p className="text-sm text-gray-500">
-                      {format(lastStudiedDaf.lastStudied!, 'PPP', { locale: he })}
+                      {format(lastStudiedDaf.lastStudied!, 'PPP')}
                     </p>
                   </div>
                   <div className="text-left">
