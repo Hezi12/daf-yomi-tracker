@@ -9,7 +9,7 @@ function App() {
   console.log('App component loaded');
   
   return (
-    <Router basename="/">
+    <Router>
       <Layout>
         <Routes>
           <Route path="/" element={<HomePage />} />
